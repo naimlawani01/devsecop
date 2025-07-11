@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.log
+*.pot
+*.mo
+*.db
+db.sqlite3
+.env
+.env.*
+*.env
+*.bak
+*.swp
+
+# Django/Flask
+staticfiles/
+media/
+celerybeat-schedule
+tasks_logs/
+tasks_scripts/__pycache__/
+*.sqlite3
+
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+*.sock
+
+# VSCode/IDE
+.vscode/
+.idea/
+*.iml
+
+# Coverage/test
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Misc
+*.orig
+*.rej
+
+# Ignore compiled assets
+priv-rocket-ecommerce-main/static/dist/ 

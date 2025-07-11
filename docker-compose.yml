@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  # Application Statique (accessible directement pour pentests)
+  static-app:
+    build: ./static-app
+    container_name: static-app
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+
+  # Django Dashboard
+  django-app:
+    build: ./django-soft-ui-dashboard
+    container_name: django-app
+    ports:
+      - "8000:5005"
+    restart: unless-stopped
+
+  # Flask Application
+  flask-app:
+    build: ./flask-datta-1752138310
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  # Rocket Ecommerce App
+  rocket-app:
+    build: ./priv-rocket-ecommerce-main
+    container_name: rocket-app
+    ports:
+      - "8001:5005"
+    restart: unless-stopped 
