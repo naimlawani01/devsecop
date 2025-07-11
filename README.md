@@ -38,5 +38,5 @@ devsecops/
 ├── django-soft-ui-dashboard/   # Application Django
 ├── flask-datta-1752138310/     # Application Flask
 └── nginx/
-    └── nginx.conf             # Reverse proxy simple
+    └── nginx.conf             # Reverse proxy simpl
 ``` 
