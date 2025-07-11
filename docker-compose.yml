@@ -13,22 +13,30 @@ services:
   django-app:
     build: ./django-soft-ui-dashboard
     container_name: django-app
-    ports:
-      - "8000:5005"
     restart: unless-stopped
 
   # Flask Application
   flask-app:
     build: ./flask-datta-1752138310
     container_name: flask-app
-    ports:
-      - "5000:5000"
     restart: unless-stopped
 
   # Rocket Ecommerce App
   rocket-app:
     build: ./priv-rocket-ecommerce-main
     container_name: rocket-app
+    restart: unless-stopped
+
+  # Reverse Proxy Nginx (simple)
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
     ports:
-      - "8001:5005"
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - django-app
+      - flask-app
+      - rocket-app
     restart: unless-stopped 
